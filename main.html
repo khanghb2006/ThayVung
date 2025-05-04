@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phát Triển Niềm Đam Mê</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff7f0;
+        }
+        header {
+            background-color: #f8f9fa;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .hero .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0px;
+        }
+        .hero .text{
+            flex:1;
+        }
+        .hero .image img {
+            width: 400px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .hero h1 {
+            color: #e63946;
+            font-size: 2.5em;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .features li {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+        .features li::before {
+            content: "✔";
+            color: #e63946;
+            margin-right: 10px;
+        }
+        .cta-button {
+            background-color: #e63946;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1em;
+        }
+        .images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .images img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .text {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+        }
+        .newtext {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            display: flex;
+        }
+        #teacher {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20%;
+            padding: 30px;
+        }
+        .teacher-card {
+            position : relative;
+            width: 20%;;
+            text-align: center;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow:hidden
+        }
+        .teacher-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+        .teacher-card h3 {
+            margin: 10px 0 5px;
+            font-size: 1.1em;
+            color:#333;
+        }
+        .teacher-card p {
+            font-size : 0.9em;
+            color : #666;
+            margin : 0 10px 10px;
+        }
+        #lien-he {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        
+        #lien-he h2 {
+            font-size: 1.8em;
+            color: #e63946;
+            margin-bottom: 10px;
+        }
+        
+        #lien-he .text {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .contact-icons a img {
+            width: 50px;
+            height: 50px;
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-icons a img:hover {
+            transform: scale(1.2);
+        }
+        .newtext{
+            display: block;
+            width: 80%;
+            margin-left: 10%;
+            padding: 10px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+        }
+        .bullet {
+            list-style-type: disc;
+            padding-left: 0;
+            margin: 0 auto;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            line-height: 1.8;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="#ve-trung-tam">Về Trung Tâm</a>
+            <a href="#thay-vung">Thầy Nguyễn Thành Vững</a>
+            <a href="#doi-ngu-giang-vien">Đội ngũ giảng viên</a>
+            <a href="#su-menh">Sứ mệnh</a>
+            <a href="#tam-nhin">Tầm nhìn</a>
+            <a href="#chuong-trinh">Chương trình giảng dạy</a>
+        </div>
+        <a href="#lien-he" class="cta-button">Liên Hệ Ngay</a>
+    </header>
+    <section class="hero">
+        <div class="content">
+            <div class="text">
+                <h1>Trung Tâm Phát Triển Niềm Đam Mê</h1>
+                <ul class="features">
+                    <li>Chất lượng giảng dạy.</li>
+                    <li>Phương pháp hiện đại - Bài giảng trực quan, giúp học sinh dễ dàng tiếp thu kiến thức.</li>
+                    <li>Tận tâm với học sinh - Luôn theo sát, hỗ trợ để đảm bảo sự tiến bộ của từng học sinh.</li>
+                    <li>Hợp tác với phụ huynh - Đồng hành cùng gia đình để giúp học sinh đạt kết quả tốt nhất.</li>
+                </ul>
+            </div>
+            <div class="image">
+                <img src="img\total.jpg" alt="Ảnh chung">
+            </div>
+        </div>
+    </section>
+    <section id="ve-trung-tam">
+        <h2 style="display: flex;
+            justify-content: center;
+            font-size: 2em;
+            color: #e63946;"
+        >
+        Về Trung Tâm</h2>
+        <span class="newtext">Công ty TNHH Phát Triển Niềm Đam Mê là đơn vị chuyên giảng dạy môn toán dành cho các học sinh trung học cơ sở
+            (từ lớp 6 đến lớp 9). Dưới sự dẫn dắt của thầy Nguyễn Thành Vững - một giáo viên giàu kinh nghiệm và tận tâm với nghề, cùng 
+            với đội ngũ trợ giảng năng động, nhiệt huyết, chúng tôi cam kết mang lại một môi trường học tập chất lượng giúp học sinh nắm 
+            vững kiến thức và khả năng tư duy.
+        </span>
+    </section>
+    <section id="thay-vung"> 
+        <h2 style="display: flex;
+            justify-content: center;
+            font-size: 2em;
+            color: #e63946;"
+        >Thầy Nguyễn Thành Vững</h2>
+        <section id="teacher"> 
+            <div class="teacher-card">
+                <img src="img\thayvung.png" alt="Nguyễn Thành Vững">
+                <h3>Nguyễn Thành Vững</h3>
+                <p>Giáo viên tại Trường THCS Trần Đại Nghĩa</p>
+            </div>
+        </section>
+        <span class="newtext">Thầy Nguyễn Thành Vững là người sáng lập và trực tiếp giảng dạy tại công ty TNHH Phát Triển Niềm Đam Mê. Thầy có nhiều năm kinh nghiệm 
+            giảng dạy môn Toán tại Trường THCS Trần Đại Nghĩa - một trong những ngôi trường có chất lượng đào tạo tốt và nhiều học sinh xuất sắc 
+            trong các kì thi học sinh giỏi cấp tỉnh.
+        </span>
+        <span class="newtext"> Trong quá trình giảng dạy, thầy luôn chú trọng đến việc xây dựng phương pháp học tập hiệu quả, giúp học sinh không chỉ nắm 
+            chắc kiến thức lý thuyết mà còn rèn luyện khả năng tư duy logic, phân tích và giải quyết các bài toán một cách hiệu quả và sáng tạo.
+            Nhiều học sinh do thầy hướng dẫn đã đạt được nhiều kết quả cao trong các kì thi quan trọng đặc biệt là kì thi tuyển sinh vào lớp 10. 
+        </span>
+    </section>
+    <section id="doi-ngu-giang-vien">
+        <h2 style="display: flex;
+            justify-content: center;
+            font-size: 2em;
+            color: #e63946;"
+        >Đội ngũ giảng viên</h2>
+        <p class="newtext"> Bên cạnh thầy Nguyễn Thành Vững, trung tâm còn có đội ngũ trợ giảng giàu nhiệt huyết, luôn sẵn sàng hỗ trợ các bạn học sinh 
+            trong quá trình học tập.
+        <section id="teacher"> 
+            <div class="teacher-card">
+                <img src="img\huan.jpg" alt="Lý Hoàng Huân">
+                <h3>Lý Hoàng Huân</h3>
+                <p>Học tại Đại học Khoa học Tự nhiên - ĐHQG Tp.HCM</p>
+            </div>
+            <div class="teacher-card">
+                <img src="img\hung.jpg" alt="Hoàng Ngọc Hưng">
+                <h3>Hoàng Ngọc Hưng</h3>
+                <p>Học tại Đại học Sài Gòn</p>
+            </div>
+            <div class="teacher-card">
+                <img src="img\tri.jpg" alt="Nguyễn Nhựt Trí">
+                <h3>Nguyễn Nhựt Trí</h3>
+                <p>Giáo viên tại trường THCS Nguyễn Trường Tộ.</p>
+            </div>
+        </section>
+        <p class="newtext">Các trợ giảng luôn sẵn sàng hỗ trợ các học sinh trong việc tiếp thu kiến thức, giải đáp thắc mắc và rèn luyện kỹ năng giải toán
+            một cách hiệu quả.
+        </p>
+    </section>
+    <section id="su-menh">
+        <h2 style="display: flex;
+            justify-content: center;
+            font-size: 2em;
+            color: #e63946;"
+        >Sứ mệnh</h2>
+        <span class="newtext">Chúng tôi mong muốn mang đến cho học sinh một nền tảng Toán học vững chắc, giúp các em không chỉ học tốt trên lớp mà còn hình thành 
+            niềm đam mê với môn học. Thông qua các phương pháp giảng dạy dễ hiểu, trực quan, chúng tôi giúp học sinh tiếp thu kiến thức nhanh chóng và hiệu quả 
+        </span>
+    </section>
+    <section id="tam-nhin">
+        <h2 style="display: flex;
+            justify-content: center;
+            font-size: 2em;
+            color: #e63946;"
+        >Tầm nhìn</h2>
+        <span class="newtext"> Trở thành một trong những đơn vị giảng dạy Toán uy tín, góp phần nâng cao chất lượng giáo dục và tạo nên các nền tảng vững chắc để học sinh 
+            có thể tiếp tục chinh phục những thử thách lớn hơn trong tương lai.
+        </span>
+    </section>
+    <section id="chuong-trinh">
+        <h2 style="display: flex;
+            justify-content: center;
+            font-size: 2em;
+            color: #e63946;"
+        >Chương trình giảng dạy</h2>
+        <ul class="bullet">
+            <li><strong> Dạy toán từ lớp 6 đến lớp 9</strong> - Chương trình bám sát nội dung giáo dục, giúp học sinh nắm chắc kiến thức và vận dụng hiệu quả</li>
+            <li><strong> Luyện thi vào lớp 10</strong> - Khóa học chuyên sâu giúp học sinh củng cố kiến thức, rèn luyện kỹ năng giải đề và tự tin bước vào kỳ thi chuyển cấp</li>
+        </ul>
+        <span class="newtext"> Dưới sự hướng dẫn tận tâm của Thầy Nguyễn Thành Vững cùng đội ngũ trợ giảng đầy nhiệt huyết, công ty TNHH Phát Triển Niềm Đam Mê luôn sẵn sàng
+            đồng hành cùng các em học sinh trên hành trình chinh phục môn Toán.
+        </span>
+    </section>
+    <section id="lien-he">
+        <h2>Liên Hệ Với Chúng Tôi Qua</h2>
+        <span class="newtext">Nếu bạn có bất kỳ câu hỏi nào hoặc muốn biết thêm thông tin về các khóa học, vui lòng liên hệ với chúng tôi:</span>
+        <div class="contact-icons">
+            <a href="https://www.facebook.com/vung.nguyenthanh.1">
+                <img src="img/facebook.png" alt="Facebook">
+            </a>
+            <a href="mailto:info@phattrienniendam.com">
+                <img src="img/mail.jpg" alt="Email">
+            </a>
+            <a href="tel:+84901234567">
+                <img src="img/telephone.jpg" alt="Phone">
+            </a>
+        </div>
+    </section>
+</body>
+</html>
